@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Игра-потеря времени</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #game-container {
+            margin-top: 50px;
+        }
+        
+        #click-button {
+            font-size: 50px;
+            padding: 20px 40px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        #click-count {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <button id="click-button">Потеряй время!</button>
+        <div id="click-count">Кликов: 0</div>
+    </div>
+
+    <script>
+        let clickCount = 0;
+        const clickButton = document.getElementById('click-button');
+        const clickCountDisplay = document.getElementById('click-count');
+
+        clickButton.addEventListener('click', () => {
+            clickCount++;
+            clickCountDisplay.textContent = `Ты потерял: ${clickCount}`;
+        });
+    </script>
+</body>
+</html>
